@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Madina Halal Shop — Freeman Street, Grimsby</title>
+<meta name="description" content="Independent halal grocer on Freeman Street, Grimsby. Halal meat, rice, spices, dates, fresh herbs and pantry staples for the neighbourhood.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #F3EAD3;
+    --ivory-warm: #EADFC4;
+    --madina: #1F4A36;
+    --madina-deep: #122E22;
+    --brass: #BE8A3E;
+    --brass-soft: #D8B273;
+    --ink: #14110C;
+    --rule: rgba(20, 17, 12, 0.18);
+    --display: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+    --body: "Jost", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: clamp(1rem, 0.6rem + 0.5vw, 1.125rem);
+    line-height: 1.55;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0 0.05 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    font-weight: 500;
+    margin: 0;
+    text-wrap: balance;
+    color: var(--madina-deep);
+  }
+
+  p { text-wrap: pretty; hyphens: auto; margin: 0; }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 220ms ease;
+  }
+
+  /* ─── Layout ─────────────────────────────────────── */
+
+  .wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── Top bar ────────────────────────────────────── */
+
+  .topbar {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.1rem 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .topbar__grid {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .topbar__mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--madina);
+  }
+
+  .topbar__mark svg { display: block; width: 18px; height: 18px; }
+
+  .topbar__meta {
+    color: var(--ink);
+    opacity: 0.66;
+    font-size: 0.72rem;
+  }
+
+  /* ─── Masthead ───────────────────────────────────── */
+
+  .masthead {
+    padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3rem);
+    position: relative;
+  }
+
+  .masthead__eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .masthead__title {
+    font-size: clamp(3.4rem, 11vw, 9rem);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.022em;
+    margin-bottom: 1.25rem;
+  }
+
+  .masthead__title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--madina);
+  }
+
+  .masthead__sub {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 56rem;
+  }
+
+  @media (min-width: 760px) {
+    .masthead__sub { grid-template-columns: 5fr 4fr; gap: 3rem; }
+  }
+
+  .masthead__lede {
+    font-family: var(--display);
+    font-size: clamp(1.35rem, 1.6vw + 0.8rem, 1.85rem);
+    line-height: 1.35;
+    color: var(--ink);
+    font-weight: 400;
+  }
+
+  .masthead__address {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--rule);
+    color: var(--ink);
+  }
+
+  .masthead__address strong {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--madina);
+    margin-bottom: 0.45rem;
+  }
+
+  /* ─── Marquee ────────────────────────────────────── */
+
+  .marquee {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+    background: var(--ivory-warm);
+    position: relative;
+    z-index: 2;
+  }
+
+  .marquee__track {
+    display: inline-flex;
+    gap: 3rem;
+    padding: 1.1rem 0;
+    white-space: nowrap;
+    animation: scroll 48s linear infinite;
+    font-family: var(--display);
+    font-size: clamp(1.4rem, 2vw + 0.6rem, 2.4rem);
+    font-style: italic;
+    color: var(--madina-deep);
+    font-weight: 500;
+  }
+
+  .marquee__track span { display: inline-flex; align-items: center; gap: 3rem; }
+
+  .marquee__dot {
+    width: 0.4em;
+    height: 0.4em;
+    border-radius: 50%;
+    background: var(--brass);
+    display: inline-block;
+  }
+
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+  }
+
+  /* ─── Section base ───────────────────────────────── */
+
+  section { padding: clamp(3rem, 8vw, 6.5rem) 0; position: relative; z-index: 2; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brass);
+    margin-bottom: 1.6rem;
+  }
+
+  .section-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--brass);
+  }
+
+  /* ─── About ──────────────────────────────────────── */
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  @media (min-width: 880px) {
+    .about__grid { grid-template-columns: 4fr 5fr; }
+  }
+
+  .about__heading {
+    font-size: clamp(2.4rem, 5vw + 0.5rem, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.018em;
+  }
+
+  .about__body p + p { margin-top: 1.2rem; }
+
+  .about__body {
+    font-size: clamp(1.02rem, 0.3vw + 0.95rem, 1.18rem);
+    line-height: 1.7;
+  }
+
+  .about__body .pullquote {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.4rem, 1.5vw + 0.8rem, 1.9rem);
+    line-height: 1.35;
+    color: var(--madina-deep);
+    padding: 1.5rem 0 1.5rem 1.4rem;
+    border-left: 2px solid var(--brass);
+    margin: 1.8rem 0;
+  }
+
+  /* ─── Star divider ──────────────────────────────── */
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    color: var(--brass);
+  }
+
+  .divider__line {
+    flex: 0 1 6rem;
+    height: 1px;
+    background: var(--brass);
+    opacity: 0.55;
+  }
+
+  .divider svg { width: 22px; height: 22px; display: block; }
+
+  /* ─── Shelves (broadsheet list) ──────────────────── */
+
+  .shelves {
+    background: var(--madina-deep);
+    color: var(--ivory);
+    position: relative;
+    z-index: 2;
+  }
+
+  .shelves .section-label { color: var(--brass-soft); }
+  .shelves .section-label::before { background: var(--brass-soft); }
+
+  .shelves__heading {
+    color: var(--ivory);
+    font-size: clamp(2.6rem, 6vw + 0.5rem, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+    margin-bottom: 2.8rem;
+  }
+
+  .shelves__heading em { color: var(--brass-soft); font-style: italic; }
+
+  .shelves__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem 3rem;
+  }
+
+  @media (min-width: 680px) {
+    .shelves__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1020px) {
+    .shelves__grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .shelf__title {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--brass-soft);
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid rgba(216, 178, 115, 0.32);
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+  }
+
+  .shelf__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgba(243, 234, 211, 0.86);
+  }
+
+  .shelf__list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .shelf__list li::before {
+    content: "";
+    flex: 0 0 4px;
+    height: 4px;
+    background: var(--brass);
+    margin-bottom: 3px;
+  }
+
+  .shelves__note {
+    margin-top: 3rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid rgba(216, 178, 115, 0.32);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(243, 234, 211, 0.7);
+    max-width: 50ch;
+  }
+
+  /* ─── Find us ────────────────────────────────────── */
+
+  .find {
+    background: var(--ivory);
+  }
+
+  .find__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: end;
+  }
+
+  @media (min-width: 820px) {
+    .find__grid { grid-template-columns: 5fr 4fr; }
+  }
+
+  .find__heading {
+    font-size: clamp(2.6rem, 6vw + 0.5rem, 5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .find__heading em { font-style: italic; color: var(--brass); }
+
+  .find__details {
+    font-family: var(--display);
+    font-size: clamp(1.25rem, 1vw + 0.9rem, 1.7rem);
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  .find__details span { display: block; }
+
+  .find__details .pin {
+    font-family: var(--body);
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .find__details .post {
+    font-family: var(--body);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    margin-top: 0.45rem;
+    font-size: 0.95rem;
+    color: var(--madina);
+  }
+
+  .find__note {
+    margin-top: 2.5rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.75;
+    max-width: 38ch;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.2rem;
+  }
+
+  /* ─── Footer ─────────────────────────────────────── */
+
+  footer {
+    background: var(--madina-deep);
+    color: var(--ivory);
+    padding: 3.5rem 0 2.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .footer__mark {
+    font-family: var(--display);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--brass-soft);
+  }
+
+  .footer__est { color: rgba(243, 234, 211, 0.6); }
+
+  /* ─── Scroll reveal ──────────────────────────────── */
+
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 28%;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(1.6rem); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap topbar">
+  <div class="topbar__grid">
+    <span class="topbar__mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <path d="M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z"/>
+      </svg>
+      Al Madina
+    </span>
+    <span class="topbar__meta">Freeman Street · Grimsby DN32</span>
+  </div>
+</div>
+
+<header class="wrap masthead">
+  <div class="masthead__eyebrow">Halal grocer · Freeman Street</div>
+  <h1 class="masthead__title">
+    Al Madina<br>
+    <em>Halal Shop.</em>
+  </h1>
+  <div class="masthead__sub">
+    <p class="masthead__lede">
+      A neighbourhood grocer on Freeman Street stocking halal meat, rice and pulses, fresh herbs, spices, and the cupboard staples Grimsby families cook from every week.
+    </p>
+    <div class="masthead__address">
+      <strong>Find the shop</strong>
+      214–216 Freeman Street<br>
+      Grimsby, DN32 9DR
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>
+      Halal lamb &amp; goat <i class="marquee__dot"></i>
+      Basmati &amp; sella rice <i class="marquee__dot"></i>
+      Fresh coriander &amp; mint <i class="marquee__dot"></i>
+      Medjool dates <i class="marquee__dot"></i>
+      Whole spices <i class="marquee__dot"></i>
+      Lentils &amp; pulses <i class="marquee__dot"></i>
+      Halloumi &amp; feta <i class="marquee__dot"></i>
+      Frozen samosas <i class="marquee__dot"></i>
+      Tahini &amp; olive oil <i class="marquee__dot"></i>
+      Chapati flour <i class="marquee__dot"></i>
+    </span>
+    <span aria-hidden="true">
+      Halal lamb &amp; goat <i class="marquee__dot"></i>
+      Basmati &amp; sella rice <i class="marquee__dot"></i>
+      Fresh coriander &amp; mint <i class="marquee__dot"></i>
+      Medjool dates <i class="marquee__dot"></i>
+      Whole spices <i class="marquee__dot"></i>
+      Lentils &amp; pulses <i class="marquee__dot"></i>
+      Halloumi &amp; feta <i class="marquee__dot"></i>
+      Frozen samosas <i class="marquee__dot"></i>
+      Tahini &amp; olive oil <i class="marquee__dot"></i>
+      Chapati flour <i class="marquee__dot"></i>
+    </span>
+  </div>
+</div>
+
+<section class="about">
+  <div class="wrap about__grid">
+    <div class="reveal">
+      <div class="section-label">The shop</div>
+      <h2 class="about__heading">A pantry for the street.</h2>
+    </div>
+    <div class="about__body reveal">
+      <p>
+        Al Madina is a working halal grocer in the middle of Freeman Street — a few doors down from the post office, on the stretch of road that has fed Grimsby's families for a hundred years.
+      </p>
+      <p class="pullquote">
+        We stock what the neighbourhood actually cooks: halal meat from trusted butchers, sacks of rice, fresh herbs by the bunch, the spices you measure by handful, and the small things that mean home.
+      </p>
+      <p>
+        Come in for the weekly shop, the late-evening top-up, or the one specific tin of ghee you can't find at the supermarket. We're independent, locally owned, and quietly proud of the shelf.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap divider" aria-hidden="true">
+  <span class="divider__line"></span>
+  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1">
+    <path d="M16 2 L19 13 L30 16 L19 19 L16 30 L13 19 L2 16 L13 13 Z"/>
+    <path d="M16 6 L18 14 L26 16 L18 18 L16 26 L14 18 L6 16 L14 14 Z" opacity="0.5"/>
+  </svg>
+  <span class="divider__line"></span>
+</div>
+
+<section class="shelves">
+  <div class="wrap">
+    <div class="section-label">On the shelves</div>
+    <h2 class="shelves__heading reveal">Halal meat, the spice rack, <em>and the staples</em> in between.</h2>
+
+    <div class="shelves__grid">
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Halal Meat &amp; Frozen</h3>
+        <ul class="shelf__list">
+          <li>Halal lamb &amp; goat cuts</li>
+          <li>Fresh halal chicken</li>
+          <li>Minced lamb &amp; beef</li>
+          <li>Frozen samosas &amp; pakoras</li>
+          <li>Halal cooked meats</li>
+        </ul>
+      </div>
+
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Rice, Flour &amp; Pulses</h3>
+        <ul class="shelf__list">
+          <li>Basmati &amp; sella rice (1kg–10kg)</li>
+          <li>Chana, masoor &amp; toor dal</li>
+          <li>Chapati &amp; chakki atta flour</li>
+          <li>Gram &amp; rice flour</li>
+          <li>Dried chickpeas &amp; kidney beans</li>
+        </ul>
+      </div>
+
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Spices &amp; Pantry</h3>
+        <ul class="shelf__list">
+          <li>Whole &amp; ground spices</li>
+          <li>Cardamom, cumin, turmeric, cloves</li>
+          <li>Curry pastes &amp; pickles</li>
+          <li>Tahini, ghee &amp; cooking oils</li>
+          <li>Tinned tomatoes, beans &amp; coconut milk</li>
+        </ul>
+      </div>
+
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Fresh Produce</h3>
+        <ul class="shelf__list">
+          <li>Coriander, mint &amp; curry leaves</li>
+          <li>Chillies, ginger &amp; garlic</li>
+          <li>Okra, aubergine &amp; bitter gourd</li>
+          <li>Limes &amp; lemons</li>
+          <li>Onions &amp; potatoes by the kilo</li>
+        </ul>
+      </div>
+
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Dairy &amp; Bread</h3>
+        <ul class="shelf__list">
+          <li>Halloumi, feta &amp; paneer</li>
+          <li>Greek &amp; natural yoghurt</li>
+          <li>Fresh chapati, naan &amp; pitta</li>
+          <li>Butter, ghee &amp; cooking cream</li>
+          <li>Eggs by the half-dozen or tray</li>
+        </ul>
+      </div>
+
+      <div class="shelf reveal">
+        <h3 class="shelf__title">Sweets, Tea &amp; Dates</h3>
+        <ul class="shelf__list">
+          <li>Medjool &amp; ajwa dates</li>
+          <li>Karak &amp; loose-leaf chai</li>
+          <li>Mithai &amp; rusks</li>
+          <li>Rose &amp; kewra waters</li>
+          <li>Halal snacks &amp; biscuits</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="shelves__note">
+      We restock through the week. If there's something specific you need for the weekend, ask at the counter — we'll usually have it in by the next delivery.
+    </p>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap find__grid">
+    <div class="reveal">
+      <div class="section-label">Find us</div>
+      <h2 class="find__heading">Two-one-four<br>Freeman <em>Street.</em></h2>
+    </div>
+    <div class="find__details reveal">
+      <span class="pin">The shop</span>
+      <span>Al Madina Halal Shop</span>
+      <span>214–216 Freeman Street</span>
+      <span>Grimsby</span>
+      <span class="post">DN32 9DR</span>
+      <p class="find__note">
+        Walk-in only. We're a working high-street grocer — pop in during shop hours and one of us will be on the counter.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer__grid">
+    <span class="footer__mark">Al Madina <em>·</em> Halal Shop</span>
+    <span>214–216 Freeman Street · Grimsby · DN32 9DR</span>
+    <span class="footer__est">Independent · Locally owned</span>
+  </div>
+</footer>
+
+</body>
+</html>
